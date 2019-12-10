@@ -19,3 +19,8 @@ def load_bluebird_midflap():
 
 def load_bluebird_upflap():
     return pygame.image.load(os.path.join(__ROOT_DIR, '..', '..', 'assets', 'bluebird-upflap.png')).convert_alpha()
+
+
+def load_base_ground(screen_size):
+    asset_base_ground = pygame.image.load(os.path.join(__ROOT_DIR, '..', '..', 'assets', 'base.png')).convert_alpha()
+    return pygame.transform.scale(asset_base_ground, screen_size)
