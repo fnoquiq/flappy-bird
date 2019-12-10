@@ -24,3 +24,8 @@ def load_bluebird_upflap():
 def load_base_ground(screen_size):
     asset_base_ground = pygame.image.load(os.path.join(__ROOT_DIR, '..', '..', 'assets', 'base.png')).convert_alpha()
     return pygame.transform.scale(asset_base_ground, screen_size)
+
+
+def load_pipe(screen_size):
+    asset_pipe = pygame.image.load(os.path.join(__ROOT_DIR, '..', '..', 'assets', 'pipe-red.png')).convert_alpha()
+    return pygame.transform.scale(asset_pipe, screen_size)
