@@ -6,7 +6,7 @@
 
 * Python 3.7.5
 * PIP 19.2.3
-* PyGame 1.9.6
+* PyGame 2.0.0 (dev6)
 
 ---
 
