@@ -5,6 +5,7 @@ import time
 from pygame.locals import *
 
 from src.controller.AssetController import load_background
+from src.controller.MenuController import MenuController
 from src.model.Pipe import Pipe
 from src.model.Ground import Ground
 from src.model.Bird import Bird
@@ -38,9 +39,7 @@ class GameController:
 
         self.BACKGROUND = load_background(self.get_screen_size())
 
-        self.__init_birds()
-        self.__init_grounds()
-        self.__init_pipes()
+        menu = MenuController(self.screen, self.BACKGROUND, self)
 
     def __init_grounds(self):
         self.grounds_group = pygame.sprite.Group()
@@ -62,6 +61,9 @@ class GameController:
             self.pipes_group.add(pipes[1])
 
     def start(self):
+        self.__init_birds()
+        self.__init_grounds()
+        self.__init_pipes()
 
         while True:
 
@@ -133,10 +135,10 @@ class GameController:
         return self.SCREEN_WIDTH, self.SCREEN_HEIGHT
 
     def game_over(self):
-        font = pygame.font.Font(None, 36)
+        font = pygame.font.Font('freesansbold.ttf', 36)
         text = font.render("Game Over", True, (255, 255, 255))
         pygame.draw.rect(self.screen, (0, 0, 0), [50, 50, 300, 40])
-        self.screen.blit(text, [132, 55])
+        self.screen.blit(text, [107, 55])
         pygame.display.flip()
         time.sleep(5)
         pygame.quit()
