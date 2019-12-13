@@ -1,5 +1,6 @@
 import pygame
 import random
+import time
 
 from pygame.locals import *
 
@@ -31,6 +32,7 @@ class GameController:
 
     def __init__(self):
         pygame.init()
+        pygame.display.set_caption("Flappy Bird")
         self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode(self.get_screen_size())
 
@@ -131,7 +133,14 @@ class GameController:
         return self.SCREEN_WIDTH, self.SCREEN_HEIGHT
 
     def game_over(self):
+        font = pygame.font.Font(None, 36)
+        text = font.render("Game Over", True, (255, 255, 255))
+        pygame.draw.rect(self.screen, (0, 0, 0), [50, 50, 300, 40])
+        self.screen.blit(text, [132, 55])
+        pygame.display.flip()
+        time.sleep(5)
         pygame.quit()
+        exit()
 
     def __get_random_pipes(self, xpos):
         size = random.randint(100, 300)
