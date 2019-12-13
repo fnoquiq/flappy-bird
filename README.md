@@ -1,6 +1,6 @@
 # Flappy Bird
 
-![GIF-Exemplo-Gameplay](https://github.com/fnoquiq/speed-detection/blob/master/gameplay-example.gif)
+![GIF-Exemplo-Gameplay](https://github.com/fnoquiq/flappy-bird/blob/master/gameplay-example.gif)
 
 ---
 
