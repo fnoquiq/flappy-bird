@@ -1,5 +1,7 @@
 # Flappy Bird
 
+![GIF-Exemplo-Gameplay](https://github.com/fnoquiq/speed-detection/blob/master/gameplay-example.gif)
+
 ---
 
 ### Tecnologias utilizadas
